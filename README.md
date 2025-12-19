@@ -54,7 +54,7 @@ Suivez ces étapes pour lancer le projet localement.
 
 ### 1. Clonage du projet
 ```bash
-git clone [https://github.com/simohamedK/SCI-COLLAB-FullStack.git](https://github.com/simohamedK/SCI-COLLAB-FullStack.git)
+git clone https://github.com/simohamedK/SCI-COLLAB-FullStack.git
 cd SCI-COLLAB-FullStack
 
 ```
