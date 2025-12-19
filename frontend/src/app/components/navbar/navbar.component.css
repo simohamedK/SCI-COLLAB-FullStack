@@ -1,0 +1,29 @@
+.navbar {
+  /* On utilise les variables globales définies dans styles.css */
+  /* Plus besoin de définir background-color ici */
+  box-shadow: var(--shadow);
+  padding: 0.75rem 0;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* En dark mode, le dégradé reste visible et joli */
+}
+
+/* Avatar dans la navbar */
+.user-avatar-sm {
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

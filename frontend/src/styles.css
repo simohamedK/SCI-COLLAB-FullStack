@@ -1,0 +1,200 @@
+/* 1. IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+
+/* 2. VARIABLES (Thème Clair Unique) */
+:root {
+  --primary-color: #2563eb;       /* Bleu roi */
+  --primary-hover: #1d4ed8;
+  --bg-body: #f3f4f6;             /* Gris clair reposant */
+  --text-main: #1f2937;           /* Gris foncé */
+  --text-muted: #6b7280;          /* Gris moyen */
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --card-radius: 12px;
+}
+
+/* 3. CONFIGURATION GLOBALE */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. COMPOSANTS BOOTSTRAP AMÉLIORÉS */
+
+/* Cartes blanches et propres */
+.card {
+  border: none !important;
+  border-radius: var(--card-radius) !important;
+  box-shadow: var(--card-shadow);
+  background-color: white !important; /* On force le blanc */
+  margin-bottom: 20px;
+}
+
+/* Boutons */
+.btn {
+  border-radius: 8px !important;
+  font-weight: 500;
+  padding: 8px 16px;
+  text-transform: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+/* Inputs */
+.form-control, .form-select, .input-group-text, textarea {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: var(--text-main);
+}
+
+.form-control:focus {
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: var(--primary-color);
+}
+
+/* Liens */
+a { text-decoration: none; color: inherit; }
+
+/* Utilitaires */
+.cursor-pointer { cursor: pointer; }
+.text-primary { color: var(--primary-color) !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+
+/* Container qui prend tout l'écran avec un fond dégradé scientifique */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+/* La carte blanche centrale */
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 450px; /* Largeur max pour ne pas être trop large sur PC */
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Pour que le header ne dépasse pas */
+  animation: slideUp 0.5s ease-out;
+}
+
+/* En-tête bleu */
+.auth-header {
+  background-color: #0d6efd; /* Bleu Science */
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+}
+
+.auth-header h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.auth-header p {
+  margin: 5px 0 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* Corps du formulaire */
+.auth-body {
+  padding: 30px;
+}
+
+/* Groupes de champs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #344767;
+  font-size: 0.9rem;
+}
+
+/* Inputs stylisés */
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Important pour le padding */
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+  outline: none;
+}
+
+/* Bouton principal */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #0b5ed7;
+}
+
+/* Pied de page (lien vers register/login) */
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.auth-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Animation d'apparition */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
